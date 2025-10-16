@@ -6,9 +6,11 @@ sudo mn --topo linear,6 --mac --link tc,bw=25
 # Linhas de comando para verificação de informações
 verificação de informações específicas
 
-h1 ifconfig **verifica informações h1**
-h2 ifconfig **verifica informações h2**
-s1 ifconfig **verifica informações s1**
+h1 ifconfig
+
+h2 ifconfig
+
+s1 ifconfig
 
 # Verificação de informações de todos os endereços
 dump
@@ -17,10 +19,12 @@ dump
 
 # Executando ping entre diferentes nós
 h1 ping h6
-h6 ping h3
-h5 ping h1
-h2 ping h4
 
+h6 ping h3
+
+h5 ping h1
+
+h2 ping h4
 
 
 # Entrando nos terminais de cada nó
@@ -40,6 +44,7 @@ iperf -c 10.0.0.1 -p 5555 -t 15 -i 1
 
 # Caso queira apagar após sair do mininet
 sudo mn -c
+
 
 
 
